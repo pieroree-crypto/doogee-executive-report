@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>访问验证｜DOOGEE 三品线经营决策与证据中心</title>
+  <style>
+    :root{color-scheme:light;--bg:#f6f3ee;--card:#fff;--ink:#102a43;--muted:#62758a;--blue:#0b61cd;--line:#d8e1ea;--danger:#a43131}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--bg);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+    main{width:min(100%,480px);padding:38px;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:0 18px 60px rgba(16,42,67,.09)}
+    .eyebrow{margin:0 0 12px;color:var(--blue);font-size:13px;font-weight:750;letter-spacing:.08em;text-transform:uppercase}h1{margin:0;font-size:clamp(28px,6vw,38px);line-height:1.18;letter-spacing:-.02em;text-wrap:balance}p{font-size:16px;line-height:1.75}.hint{margin:16px 0 26px;color:var(--muted)}label{display:block;margin-bottom:9px;font-size:14px;font-weight:700}input{width:100%;height:50px;padding:0 15px;border:1px solid #b9c7d5;border-radius:12px;background:#fff;color:var(--ink);font-size:17px;outline:none}input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(11,97,205,.12)}button{width:100%;height:50px;margin-top:16px;border:0;border-radius:12px;background:var(--blue);color:#fff;font-size:16px;font-weight:750;cursor:pointer}button:hover{background:#094fa8}.error{display:none;margin:0 0 14px;padding:10px 12px;border-radius:10px;background:#fff1f0;color:var(--danger);font-weight:650}.foot{margin:20px 0 0;color:var(--muted);font-size:13px}@media(max-width:520px){main{padding:28px 22px;border-radius:20px}}
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Internal Executive Report</p>
+    <h1>DOOGEE 三品线经营决策与证据中心</h1>
+    <p class="hint">请输入访问密码。验证后可查看老板重点结果，并按需下钻到数据、Excel、PPT和完整证据。</p>
+    <p id="error" class="error" role="alert">密码不正确，请重试。</p>
+    <form id="unlock-form">
+      <label for="password">访问密码</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+      <button type="submit">进入报告</button>
+    </form>
+    <p class="foot">内部经营资料 · 请勿转发给未授权人员</p>
+  </main>
+  <script>
+  (() => {
+    const envelope={"version":1,"compression":"gzip","iterations":250000,"salt":"mpiShmthx4nsyCO8qFiT8w==","iv":"57o2Onk5ThaNyJnb","ciphertext":"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"};
+    const cacheKey="doogee_report_unlock_v1";
+    const form=document.getElementById("unlock-form");
+    const error=document.getElementById("error");
+    const input=document.getElementById("password");
+    const fromB64=(value)=>Uint8Array.from(atob(value),(c)=>c.charCodeAt(0));
+    const toB64=(bytes)=>{let value="";for(const byte of bytes)value+=String.fromCharCode(byte);return btoa(value)};
+    const importKey=(raw)=>crypto.subtle.importKey("raw",raw,"AES-GCM",false,["decrypt"]);
+    async function derive(password){
+      const material=await crypto.subtle.importKey("raw",new TextEncoder().encode(password),"PBKDF2",false,["deriveBits"]);
+      return new Uint8Array(await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt:fromB64(envelope.salt),iterations:envelope.iterations},material,256));
+    }
+    async function unlock(raw,remember){
+      try{
+        const key=await importKey(raw);
+        const compressed=await crypto.subtle.decrypt({name:"AES-GCM",iv:fromB64(envelope.iv)},key,fromB64(envelope.ciphertext));
+        const stream=new Blob([compressed]).stream().pipeThrough(new DecompressionStream("gzip"));
+        const plain=await new Response(stream).arrayBuffer();
+        if(remember)sessionStorage.setItem(cacheKey,toB64(raw));
+        const parsed=new DOMParser().parseFromString(new TextDecoder().decode(plain),"text/html");
+        document.documentElement.lang=parsed.documentElement.lang||"zh-CN";
+        document.head.replaceWith(parsed.head);
+        document.body.replaceWith(parsed.body);
+        for(const oldScript of Array.from(document.querySelectorAll("script"))){
+          const activeScript=document.createElement("script");
+          for(const attribute of Array.from(oldScript.attributes))activeScript.setAttribute(attribute.name,attribute.value);
+          activeScript.textContent=oldScript.textContent;
+          oldScript.replaceWith(activeScript);
+        }
+        return true;
+      }catch{return false}
+    }
+    if(new URLSearchParams(location.search).has("lock")){sessionStorage.removeItem(cacheKey);history.replaceState(null,"",location.pathname)}
+    const cached=sessionStorage.getItem(cacheKey);
+    if(cached)unlock(fromB64(cached),false).then((ok)=>{if(!ok)sessionStorage.removeItem(cacheKey)});
+    form.addEventListener("submit",async(event)=>{event.preventDefault();error.style.display="none";const raw=await derive(input.value);if(!(await unlock(raw,true))){error.style.display="block";input.select()}});
+  })();
+  </script>
+</body>
+</html>

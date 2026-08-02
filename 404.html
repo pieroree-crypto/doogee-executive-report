@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>访问验证｜DOOGEE 三品线经营决策与证据中心</title>
+  <style>
+    :root{color-scheme:light;--bg:#f6f3ee;--card:#fff;--ink:#102a43;--muted:#62758a;--blue:#0b61cd;--line:#d8e1ea;--danger:#a43131}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--bg);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+    main{width:min(100%,480px);padding:38px;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:0 18px 60px rgba(16,42,67,.09)}
+    .eyebrow{margin:0 0 12px;color:var(--blue);font-size:13px;font-weight:750;letter-spacing:.08em;text-transform:uppercase}h1{margin:0;font-size:clamp(28px,6vw,38px);line-height:1.18;letter-spacing:-.02em;text-wrap:balance}p{font-size:16px;line-height:1.75}.hint{margin:16px 0 26px;color:var(--muted)}label{display:block;margin-bottom:9px;font-size:14px;font-weight:700}input{width:100%;height:50px;padding:0 15px;border:1px solid #b9c7d5;border-radius:12px;background:#fff;color:var(--ink);font-size:17px;outline:none}input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(11,97,205,.12)}button{width:100%;height:50px;margin-top:16px;border:0;border-radius:12px;background:var(--blue);color:#fff;font-size:16px;font-weight:750;cursor:pointer}button:hover{background:#094fa8}.error{display:none;margin:0 0 14px;padding:10px 12px;border-radius:10px;background:#fff1f0;color:var(--danger);font-weight:650}.foot{margin:20px 0 0;color:var(--muted);font-size:13px}@media(max-width:520px){main{padding:28px 22px;border-radius:20px}}
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Internal Executive Report</p>
+    <h1>DOOGEE 三品线经营决策与证据中心</h1>
+    <p class="hint">请输入访问密码。验证后可查看老板重点结果，并按需下钻到数据、Excel、PPT和完整证据。</p>
+    <p id="error" class="error" role="alert">密码不正确，请重试。</p>
+    <form id="unlock-form">
+      <label for="password">访问密码</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+      <button type="submit">进入报告</button>
+    </form>
+    <p class="foot">内部经营资料 · 请勿转发给未授权人员</p>
+  </main>
+  <script>
+  (() => {
+    const envelope={"version":1,"compression":"gzip","iterations":250000,"salt":"mpiShmthx4nsyCO8qFiT8w==","iv":"tbGGFraenjDOZzRw","ciphertext":"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"};
+    const cacheKey="doogee_report_unlock_v1";
+    const form=document.getElementById("unlock-form");
+    const error=document.getElementById("error");
+    const input=document.getElementById("password");
+    const fromB64=(value)=>Uint8Array.from(atob(value),(c)=>c.charCodeAt(0));
+    const toB64=(bytes)=>{let value="";for(const byte of bytes)value+=String.fromCharCode(byte);return btoa(value)};
+    const importKey=(raw)=>crypto.subtle.importKey("raw",raw,"AES-GCM",false,["decrypt"]);
+    async function derive(password){
+      const material=await crypto.subtle.importKey("raw",new TextEncoder().encode(password),"PBKDF2",false,["deriveBits"]);
+      return new Uint8Array(await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt:fromB64(envelope.salt),iterations:envelope.iterations},material,256));
+    }
+    async function unlock(raw,remember){
+      try{
+        const key=await importKey(raw);
+        const compressed=await crypto.subtle.decrypt({name:"AES-GCM",iv:fromB64(envelope.iv)},key,fromB64(envelope.ciphertext));
+        const stream=new Blob([compressed]).stream().pipeThrough(new DecompressionStream("gzip"));
+        const plain=await new Response(stream).arrayBuffer();
+        if(remember)sessionStorage.setItem(cacheKey,toB64(raw));
+        const parsed=new DOMParser().parseFromString(new TextDecoder().decode(plain),"text/html");
+        document.documentElement.lang=parsed.documentElement.lang||"zh-CN";
+        document.head.replaceWith(parsed.head);
+        document.body.replaceWith(parsed.body);
+        for(const oldScript of Array.from(document.querySelectorAll("script"))){
+          const activeScript=document.createElement("script");
+          for(const attribute of Array.from(oldScript.attributes))activeScript.setAttribute(attribute.name,attribute.value);
+          activeScript.textContent=oldScript.textContent;
+          oldScript.replaceWith(activeScript);
+        }
+        return true;
+      }catch{return false}
+    }
+    if(new URLSearchParams(location.search).has("lock")){sessionStorage.removeItem(cacheKey);history.replaceState(null,"",location.pathname)}
+    const cached=sessionStorage.getItem(cacheKey);
+    if(cached)unlock(fromB64(cached),false).then((ok)=>{if(!ok)sessionStorage.removeItem(cacheKey)});
+    form.addEventListener("submit",async(event)=>{event.preventDefault();error.style.display="none";const raw=await derive(input.value);if(!(await unlock(raw,true))){error.style.display="block";input.select()}});
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>访问验证｜DOOGEE 三品线经营决策与证据中心</title>
+  <style>
+    :root{color-scheme:light;--bg:#f6f3ee;--card:#fff;--ink:#102a43;--muted:#62758a;--blue:#0b61cd;--line:#d8e1ea;--danger:#a43131}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:var(--bg);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+    main{width:min(100%,480px);padding:38px;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:0 18px 60px rgba(16,42,67,.09)}
+    .eyebrow{margin:0 0 12px;color:var(--blue);font-size:13px;font-weight:750;letter-spacing:.08em;text-transform:uppercase}h1{margin:0;font-size:clamp(28px,6vw,38px);line-height:1.18;letter-spacing:-.02em;text-wrap:balance}p{font-size:16px;line-height:1.75}.hint{margin:16px 0 26px;color:var(--muted)}label{display:block;margin-bottom:9px;font-size:14px;font-weight:700}input{width:100%;height:50px;padding:0 15px;border:1px solid #b9c7d5;border-radius:12px;background:#fff;color:var(--ink);font-size:17px;outline:none}input:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(11,97,205,.12)}button{width:100%;height:50px;margin-top:16px;border:0;border-radius:12px;background:var(--blue);color:#fff;font-size:16px;font-weight:750;cursor:pointer}button:hover{background:#094fa8}.error{display:none;margin:0 0 14px;padding:10px 12px;border-radius:10px;background:#fff1f0;color:var(--danger);font-weight:650}.foot{margin:20px 0 0;color:var(--muted);font-size:13px}@media(max-width:520px){main{padding:28px 22px;border-radius:20px}}
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Internal Executive Report</p>
+    <h1>DOOGEE 三品线经营决策与证据中心</h1>
+    <p class="hint">请输入访问密码。验证后可查看老板重点结果，并按需下钻到数据、Excel、PPT和完整证据。</p>
+    <p id="error" class="error" role="alert">密码不正确，请重试。</p>
+    <form id="unlock-form">
+      <label for="password">访问密码</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required autofocus>
+      <button type="submit">进入报告</button>
+    </form>
+    <p class="foot">内部经营资料 · 请勿转发给未授权人员</p>
+  </main>
+  <script>
+  (() => {
+    const envelope={"version":1,"compression":"gzip","iterations":250000,"salt":"mpiShmthx4nsyCO8qFiT8w==","iv":"PFAdbksY5C2Sk15z","ciphertext":"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"};
+    const cacheKey="doogee_report_unlock_v1";
+    const form=document.getElementById("unlock-form");
+    const error=document.getElementById("error");
+    const input=document.getElementById("password");
+    const fromB64=(value)=>Uint8Array.from(atob(value),(c)=>c.charCodeAt(0));
+    const toB64=(bytes)=>{let value="";for(const byte of bytes)value+=String.fromCharCode(byte);return btoa(value)};
+    const importKey=(raw)=>crypto.subtle.importKey("raw",raw,"AES-GCM",false,["decrypt"]);
+    async function derive(password){
+      const material=await crypto.subtle.importKey("raw",new TextEncoder().encode(password),"PBKDF2",false,["deriveBits"]);
+      return new Uint8Array(await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt:fromB64(envelope.salt),iterations:envelope.iterations},material,256));
+    }
+    async function unlock(raw,remember){
+      try{
+        const key=await importKey(raw);
+        const compressed=await crypto.subtle.decrypt({name:"AES-GCM",iv:fromB64(envelope.iv)},key,fromB64(envelope.ciphertext));
+        const stream=new Blob([compressed]).stream().pipeThrough(new DecompressionStream("gzip"));
+        const plain=await new Response(stream).arrayBuffer();
+        if(remember)sessionStorage.setItem(cacheKey,toB64(raw));
+        const parsed=new DOMParser().parseFromString(new TextDecoder().decode(plain),"text/html");
+        document.documentElement.lang=parsed.documentElement.lang||"zh-CN";
+        document.head.replaceWith(parsed.head);
+        document.body.replaceWith(parsed.body);
+        for(const oldScript of Array.from(document.querySelectorAll("script"))){
+          const activeScript=document.createElement("script");
+          for(const attribute of Array.from(oldScript.attributes))activeScript.setAttribute(attribute.name,attribute.value);
+          activeScript.textContent=oldScript.textContent;
+          oldScript.replaceWith(activeScript);
+        }
+        return true;
+      }catch{return false}
+    }
+    if(new URLSearchParams(location.search).has("lock")){sessionStorage.removeItem(cacheKey);history.replaceState(null,"",location.pathname)}
+    const cached=sessionStorage.getItem(cacheKey);
+    if(cached)unlock(fromB64(cached),false).then((ok)=>{if(!ok)sessionStorage.removeItem(cacheKey)});
+    form.addEventListener("submit",async(event)=>{event.preventDefault();error.style.display="none";const raw=await derive(input.value);if(!(await unlock(raw,true))){error.style.display="block";input.select()}});
+  })();
+  </script>
+</body>
+</html>
